@@ -7,7 +7,9 @@ import {
 } from '@nestjs/common';
 import RegisterDto from './dto/register.dto';
 import { AuthenticationService } from './auth.service';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Authentication (authentication)')
 @Controller('authentication')
 @UseInterceptors(ClassSerializerInterceptor)
 export class AuthenticationController {
